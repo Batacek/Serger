@@ -1,0 +1,15 @@
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.csproj.AssemblyReference.cache
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.AssemblyInfoInputs.cache
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.AssemblyInfo.cs
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.csproj.CoreCompileInputs.cache
+D:\Projekty\Winger\Winger\Winger\bin\Debug\net6.0\Winger.exe
+D:\Projekty\Winger\Winger\Winger\bin\Debug\net6.0\Winger.deps.json
+D:\Projekty\Winger\Winger\Winger\bin\Debug\net6.0\Winger.runtimeconfig.json
+D:\Projekty\Winger\Winger\Winger\bin\Debug\net6.0\Winger.dll
+D:\Projekty\Winger\Winger\Winger\bin\Debug\net6.0\Winger.pdb
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.dll
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\refint\Winger.dll
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.pdb
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\Winger.genruntimeconfig.cache
+D:\Projekty\Winger\Winger\Winger\obj\Debug\net6.0\ref\Winger.dll
