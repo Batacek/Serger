@@ -1,6 +1,6 @@
 ﻿{
   "JSON_VER": "0.0",
-  "JSON_Version": "0.0.2",
+  "JSON_Version": "0.0.3",
   "URL": "google.com",
-  "PING_DELAY": 10000
+  "PING_DELAY": 1000 
 }

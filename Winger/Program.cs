@@ -8,6 +8,8 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        Console.WindowHeight = 20;
+        Console.WindowWidth = 40;
         string jsonString = File.ReadAllText("Config.json");
         var Config = JsonSerializer.Deserialize<Config>(jsonString);
 
@@ -38,10 +40,11 @@ class Program
                     Console.WriteLine($"Adresa: {reply.Address}");
                     Console.WriteLine($"Doba odezvy: {reply.RoundtripTime} ms");
                     Console.WriteLine($"TTL: {reply.Options.Ttl}");
-                    Console.WriteLine($"Velikost bufferu: {reply.Buffer.Length} bajtů");
+                    Console.WriteLine();
                 }
                 else
                 {
+                    Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
                     Console.WriteLine($"Ping na {Config.URL} selhal: {reply.Status}");
                     Console.Beep();
                 }
@@ -49,6 +52,7 @@ class Program
             catch (Exception ex)
             {
                 Console.WriteLine($"Ping na {Config.URL} selhal. \nChyba: {ex.Message}");
+                Console.WriteLine();
             }
 
             await Task.Delay(Config.PING_DELAY);
@@ -62,6 +66,6 @@ public class Config
     public string URL { get; set; }
     public string JSON_VER { get; set; }
     public int PING_DELAY { get; set; }
-    public string CS_Version = "0.0.2";
+    public string CS_Version = "0.0.3";
     public string CS_VER = "0.0";
 }
