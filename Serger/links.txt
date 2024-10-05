@@ -1,0 +1,6 @@
+https://stackoverflow.com/questions/11027051/develop-a-program-that-runs-in-the-background-in-net
+https://learn.microsoft.com/en-us/dotnet/api/system.serviceprocess?view=net-8.0&redirectedfrom=MSDN
+https://stackoverflow.com/questions/1212318/hide-a-c-sharp-program-from-the-task-manager
+https://stackoverflow.com/questions/1209635/c-sharp-hide-program-at-start
+https://learn.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-run-an-operation-in-the-background?view=netframeworkdesktop-4.8
+https://learn.microsoft.com/en-us/dotnet/api/system.componentmodel.backgroundworker?view=net-8.0
