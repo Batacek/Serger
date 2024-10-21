@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekty\\Serger\\Serger\\Serger.csproj": {}
+    "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj": {}
   },
   "projects": {
-    "D:\\Projekty\\Serger\\Serger\\Serger.csproj": {
+    "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekty\\Serger\\Serger\\Serger.csproj",
+        "projectUniqueName": "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj",
         "projectName": "Serger",
-        "projectPath": "D:\\Projekty\\Serger\\Serger\\Serger.csproj",
+        "projectPath": "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj",
         "packagesPath": "C:\\Users\\bartt\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekty\\Serger\\Serger\\obj\\",
+        "outputPath": "D:\\Projekty\\Serger01\\Serger\\Serger\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\bartt\\AppData\\Roaming\\NuGet\\NuGet.Config"
