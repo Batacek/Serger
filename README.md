@@ -2,14 +2,14 @@
 
 ![Static Badge](https://img.shields.io/badge/Language-C%23-blue)
 ![Static Badge](https://img.shields.io/badge/License-Custom-green)
-![Static Badge](https://img.shields.io/badge/Version-0.0.4-purple)
+![Static Badge](https://img.shields.io/badge/Version-0.0.5-purple)
 
 Serger (**Ser**ver Pin**ger**) is C# program running in your background pinging your server of any kind and will notify you if the server gets unreachable.
 <br>
 # TODO
 - ❌README
 - ✅Logs
-- ❌Languages
+- 🛠️Languages (en, cs)
 - ❌Windows notifications
 - ❌Windows tray icon
 - ❌GUI
