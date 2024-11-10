@@ -8,24 +8,27 @@
     "net6.0": []
   },
   "packageFolders": {
-    "C:\\Users\\bartt\\.nuget\\packages\\": {}
+    "C:\\Users\\natan\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj",
+      "projectUniqueName": "D:\\Coding\\cs\\Serger\\Serger\\Serger\\Serger.csproj",
       "projectName": "Serger",
-      "projectPath": "D:\\Projekty\\Serger01\\Serger\\Serger\\Serger.csproj",
-      "packagesPath": "C:\\Users\\bartt\\.nuget\\packages\\",
-      "outputPath": "D:\\Projekty\\Serger01\\Serger\\Serger\\obj\\",
+      "projectPath": "D:\\Coding\\cs\\Serger\\Serger\\Serger\\Serger.csproj",
+      "packagesPath": "C:\\Users\\natan\\.nuget\\packages\\",
+      "outputPath": "D:\\Coding\\cs\\Serger\\Serger\\Serger\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\bartt\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\natan\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "net6.0"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -38,6 +41,11 @@
         "warnAsError": [
           "NU1605"
         ]
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -54,12 +62,30 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
+        "downloadDependencies": [
+          {
+            "name": "Microsoft.AspNetCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Host.win-x64",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.NETCore.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          },
+          {
+            "name": "Microsoft.WindowsDesktop.App.Ref",
+            "version": "[6.0.33, 6.0.33]"
+          }
+        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.425\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400\\RuntimeIdentifierGraph.json"
       }
     }
   }

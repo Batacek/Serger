@@ -9,7 +9,7 @@ Serger (**Ser**ver Pin**ger**) is C# program running in your background pinging 
 # TODO
 - ❌README
 - ✅Logs
-- ❌Languages
+- 🛠️Languages (en, cz)
 - ❌Windows notifications
 - ❌Windows tray icon
 - ❌GUI
