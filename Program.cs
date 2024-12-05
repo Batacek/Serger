@@ -5,15 +5,14 @@ using System.Net.NetworkInformation;
 using System.Threading.Tasks;
 using System.Text.Json.Serialization;
 using System.Collections.Generic;
-using Serger;
 
 class Program
 {
-    private static string _logFile = $"{DateTime.Now.ToString("dd_MM_yyyy")}.log";
+    private static string log_file = $"{DateTime.Now.ToString("dd_MM_yyyy")}.log";
 
     public static void Log(string message)
     {
-        using (StreamWriter logging = new StreamWriter(_logFile, true))
+        using (StreamWriter logging = new StreamWriter(log_file, true))
         {
             logging.WriteLine(message);
         }
@@ -23,10 +22,10 @@ class Program
         Console.WindowHeight = 20;          // Window height
         Console.WindowWidth = 40;           // Window width
         
-        string jsonConfig = File.ReadAllText("Config.json");              // Config file name
-        var config = JsonSerializer.Deserialize<Config>(jsonConfig);           // Config deserialize
+        string jsonConfig = File.ReadAllText("Config.json");            // Config file name
+        var Config = JsonSerializer.Deserialize<Config>(jsonConfig);    // Config deserialize
 
-        string langFile = $"{config.Lang}.json";
+        string langFile = $"{Config.LANG}.json";
         
         // Check if language in config exists, exit if it does not
         if (!File.Exists(langFile))
@@ -35,24 +34,24 @@ class Program
             Environment.Exit(0);
         }
 
-        string jsonLang = File.ReadAllText($"{config.Lang}.json");          // Gets language from Config.json
+        string jsonLang = File.ReadAllText($"{Config.LANG}.json");      // Gets language from Config.json
         var langOption = LoadLang(jsonLang);                            // Uses selected language
 
                                                 // X = ignore Y = check for differences
-        if (config.JsonVer != config.CsVer)     // Version check (y.y.X)
+        if (Config.JSON_VER != Config.CS_VER)   // Version check (y.y.X)
         {
             Console.WriteLine($"!    {langOption.VersionMis1}    !");
-            Console.WriteLine($"JSON {langOption.Version}: {config.JsonVersion}");
-            Console.WriteLine($"Program {langOption.Version}: {config.CsVersion}");
+            Console.WriteLine($"JSON {langOption.Version}: {Config.JSON_Version}");
+            Console.WriteLine($"Program {langOption.Version}: {Config.CS_Version}");
             Console.WriteLine($"\n{langOption.InsertCorr1}.");
             Console.WriteLine($"{langOption.PressKey}...");
             Console.ReadKey();
         }        
-        else if (config.JsonVersion != config.CsVersion)   // Version check (X.X.y)
+        else if (Config.JSON_Version != Config.CS_Version)   // Version check (X.X.y)
         {
             Console.WriteLine($"!    {langOption.VersionMis1}    !");
-            Console.WriteLine($"JSON {langOption.Version}: {config.JsonVersion}");
-            Console.WriteLine($"Program {langOption.Version}: {config.CsVersion}");
+            Console.WriteLine($"JSON {langOption.Version}: {Config.JSON_Version}");
+            Console.WriteLine($"Program {langOption.Version}: {Config.CS_Version}");
             Console.WriteLine($"\n{langOption.InsertCorr1}. {langOption.InsertCorr2}.");
             Console.WriteLine($"{langOption.PressKey}...");
             Console.ReadKey();
@@ -66,19 +65,19 @@ class Program
 
             try
             {
-                PingReply reply = new Ping().Send(config.Url);      // Ping
+                PingReply reply = new Ping().Send(Config.URL);      // Ping
                 Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.ffff")}");   // Date and time
                 if (reply.Status == IPStatus.Success)       // if condition for success case
                 {
                     // Printing the info into console window
-                    Console.WriteLine($"{langOption.PingText} {config.Url} {langOption.Success}.");
+                    Console.WriteLine($"{langOption.PingText} {Config.URL} {langOption.Success}.");
                     Console.WriteLine($"{langOption.Address}: {reply.Address}");
                     Console.WriteLine($"{langOption.PingTime}: {reply.RoundtripTime} ms");
                     Console.WriteLine($"TTL: {reply.Options.Ttl}\n");
 
                     // Printing the info into .log file
                     Log($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.fff")}"); 
-                    Log($"{langOption.PingText} {config.Url} {langOption.Success}.");
+                    Log($"{langOption.PingText} {Config.URL} {langOption.Success}.");
                     Log($"{langOption.Address} {reply.Address}");
                     Log($"{langOption.PingTime} {reply.RoundtripTime} ms");
                     Log($"TTL: {reply.Options.Ttl}\n");
@@ -86,22 +85,21 @@ class Program
                 else
                 {
                     Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
-                    Console.WriteLine($"{langOption.PingText} {config.Url} {langOption.Fail}: {reply.Status}");
+                    Console.WriteLine($"{langOption.PingText} {Config.URL} {langOption.Fail}: {reply.Status}");
                     Console.Beep();     // tohle snad nemyslíš vážně??
                 }
             }
             catch (Exception ex)
             {
-                Console.WriteLine($"{langOption.PingText} {config.Url} {langOption.Fail}. \n{langOption.Error}: {ex.Message}");       // Printout the error message
+                Console.WriteLine($"{langOption.PingText} {Config.URL} {langOption.Fail}. \n{langOption.Error}: {ex.Message}");       // Printout the error message
                 Console.WriteLine();
             }
 
-            await Task.Delay(config.PingDelay);        // Pause between pings
+            await Task.Delay(Config.PING_DELAY);        // Pause between pings
         }
     }
-    public static LangDict LoadLang(string json)
+    public static LangDictionary LoadLang(string json)
     {
-        return JsonSerializer.Deserialize<LangDict>(json);
+        return JsonSerializer.Deserialize<LangDictionary>(json);
     }
 }
-
