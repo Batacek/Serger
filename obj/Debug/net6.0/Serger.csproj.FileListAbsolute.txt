@@ -13,3 +13,18 @@ D:\Projekty\SGR\Beta - 0.0\0.0.6\Serger\obj\Debug\net6.0\refint\Serger.dll
 D:\Projekty\SGR\Beta - 0.0\0.0.6\Serger\obj\Debug\net6.0\Serger.pdb
 D:\Projekty\SGR\Beta - 0.0\0.0.6\Serger\obj\Debug\net6.0\Serger.genruntimeconfig.cache
 D:\Projekty\SGR\Beta - 0.0\0.0.6\Serger\obj\Debug\net6.0\ref\Serger.dll
+C:\Users\barta\RiderProjects\Serger\bin\Debug\net6.0\Serger.exe
+C:\Users\barta\RiderProjects\Serger\bin\Debug\net6.0\Serger.deps.json
+C:\Users\barta\RiderProjects\Serger\bin\Debug\net6.0\Serger.runtimeconfig.json
+C:\Users\barta\RiderProjects\Serger\bin\Debug\net6.0\Serger.dll
+C:\Users\barta\RiderProjects\Serger\bin\Debug\net6.0\Serger.pdb
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.csproj.AssemblyReference.cache
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.AssemblyInfoInputs.cache
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.AssemblyInfo.cs
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.csproj.CoreCompileInputs.cache
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.dll
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\refint\Serger.dll
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.pdb
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\Serger.genruntimeconfig.cache
+C:\Users\barta\RiderProjects\Serger\obj\Debug\net6.0\ref\Serger.dll

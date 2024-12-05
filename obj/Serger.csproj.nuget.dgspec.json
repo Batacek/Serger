@@ -1,31 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Projekty\\SGR\\Beta - 0.0\\0.0.6\\Serger\\Serger.csproj": {}
+    "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj": {}
   },
   "projects": {
-    "D:\\Projekty\\SGR\\Beta - 0.0\\0.0.6\\Serger\\Serger.csproj": {
+    "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Projekty\\SGR\\Beta - 0.0\\0.0.6\\Serger\\Serger.csproj",
+        "projectUniqueName": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
         "projectName": "Serger",
-        "projectPath": "D:\\Projekty\\SGR\\Beta - 0.0\\0.0.6\\Serger\\Serger.csproj",
-        "packagesPath": "C:\\Users\\bartt\\.nuget\\packages\\",
-        "outputPath": "D:\\Projekty\\SGR\\Beta - 0.0\\0.0.6\\Serger\\obj\\",
+        "projectPath": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
+        "packagesPath": "C:\\Users\\barta\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
+        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
-          "C:\\Users\\bartt\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\barta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.425\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Users\\barta\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
         }
       }
     }
