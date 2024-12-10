@@ -4,16 +4,16 @@ namespace Serger;
 
 public class Config // Class for configuration variables and values
 {
-    public static string CsVersion = "0.1.0"; // CS Program file version (X.X.y)
-    public static string CsVer = "0.1"; // CS Program file version (X.y.X)
+    public string CsVer = "0.1"; // CS Program file version (X.y.X)
+    public string CsVersion = "0.1.0"; // CS Program file version (X.X.y)
 
     // X = ignore Y = check for differences
-    public static string JSON_Version { get; set; } = null!; // JSON config file version (X.X.y)
+    public string JSON_Version { get; set; } = null!; // JSON config file version (X.X.y)
     public string URL { get; set; } // URL from JSON config file
-    public static string JSON_VER { get; set; } // JSON config file version (X.y.X)
+    public string JSON_VER { get; set; } // JSON config file version (X.y.X)
     public int PING_DELAY { get; set; } // Pause lenght between pings (in ms)
     public string LANG { get; set; } // Language (currently: en/cz)
-    public static bool BETA { get; set; }
+    public bool BETA { get; set; }
 
 
     public static Config Load(string filePath = "Config.json")

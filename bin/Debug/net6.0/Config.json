@@ -1,9 +1,9 @@
 {
   "JSON_VER": "0.1",
   "JSON_Version": "0.1.0",
-  "URL": "google.com",
-  "LANG": "cs",
-  "PING_DELAY": 1000,
+  "URL": "127.0.0.1",
+  "LANG": "en",
+  "PING_DELAY": 10000,
   "DEV_MODE": false,
   "CLI_EN": false,
   "MULTITASKING": false
