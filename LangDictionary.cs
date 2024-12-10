@@ -1,4 +1,6 @@
-﻿public class LangDictionary                               // Class for localization variables and values
+﻿namespace Serger;
+
+public class LangDictionary // Class for localization variables and values
 {
     public string PingText { get; set; }
     public string Success { get; set; }

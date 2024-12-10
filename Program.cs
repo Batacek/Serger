@@ -1,9 +1,10 @@
 ﻿using System.Text.Json;
-using Serger;
+
+namespace Serger;
 
 class Program
 {
-    static async Task Main(string[] args)
+    static async Task Main()
     {
         Console.WindowHeight = 20; // Window height
         Console.WindowWidth = 40; // Window width
@@ -32,6 +33,6 @@ class Program
 
     public static LangDictionary LoadLang(string json)
     {
-        return JsonSerializer.Deserialize<LangDictionary>(json);
+        return JsonSerializer.Deserialize<LangDictionary>(json) ?? throw new InvalidOperationException();
     }
 }

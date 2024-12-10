@@ -17,8 +17,6 @@ public class Pinger
     {
         Console.Clear();
 
-        Ping pingSender = new Ping();
-
         try
         {
             PingReply reply = new Ping().Send(_config.URL); // Ping
