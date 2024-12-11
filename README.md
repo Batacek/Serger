@@ -20,7 +20,6 @@ This program will notify you if there are any troubles with your server. Right n
 
 With each release, you are provided with clear step-by-step instructions on how to install and use the basic features, as well as an introduction to the new features. We will be releasing full documentation for every feature soon.
 # TODO
-- ❌README
 - ✅Logs
 - 🛠️Languages (en, cs)
 - ❌CLI commands
