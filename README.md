@@ -2,10 +2,14 @@
 
 ![Static Badge](https://img.shields.io/badge/Language-C%23-blue)
 ![Static Badge](https://img.shields.io/badge/License-Custom-green)
-![Static Badge](https://img.shields.io/badge/Version-0.0.5-purple)
+![Static Badge](https://img.shields.io/badge/Version-Beta%200.1.0-purple)
 
-Serger (**Ser**ver Pin**ger**) is C# program running in your background pinging your server of any kind and will notify you if the server gets unreachable.
+<h1>What is it for?</h1>
+<i>Do you have some sort of server and you're worried about its availability? For example, do you have a website and you're worried that your visitors won't be able to visit it?</i>
+<br><b>This thing is for you!</b><br>
+This program will notify you if there are any troubles with your server. Right now it can only check if the server is reachable, but soon it will be able to check a lot more and get a lot more details for you.
 <br>
+
 # TODO
 - ❌README
 - ✅Logs
