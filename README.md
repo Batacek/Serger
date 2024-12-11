@@ -10,6 +10,7 @@
 This program will notify you if there are any troubles with your server. Right now it can only check if the server is reachable, but soon it will be able to check a lot more and get a lot more details for you.
 <br>
 
+
 # TODO
 - ❌README
 - ✅Logs
