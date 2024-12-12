@@ -40,7 +40,6 @@ public class Pinger
             {
                 Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
                 Console.WriteLine($"{_langDictionary.PingText} {_config.URL} {_langDictionary.Fail}: {reply.Status}");
-                Console.Beep(); // tohle snad nemyslíš vážně??
             }
         }
         catch (Exception ex)
