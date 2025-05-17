@@ -1,0 +1,10 @@
+D:\School\2024-2025\PRG\serger_winforms\bin\Debug\serger_winforms.exe.config
+D:\School\2024-2025\PRG\serger_winforms\bin\Debug\serger_winforms.exe
+D:\School\2024-2025\PRG\serger_winforms\bin\Debug\serger_winforms.pdb
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.csproj.AssemblyReference.cache
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.Form1.resources
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.Properties.Resources.resources
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.csproj.GenerateResource.cache
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.csproj.CoreCompileInputs.cache
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.exe
+D:\School\2024-2025\PRG\serger_winforms\obj\Debug\serger_winforms.pdb
