@@ -1,0 +1,16 @@
+D:\Projekty\SRG\bin\Debug\net9.0-windows\SRG.exe
+D:\Projekty\SRG\bin\Debug\net9.0-windows\SRG.deps.json
+D:\Projekty\SRG\bin\Debug\net9.0-windows\SRG.runtimeconfig.json
+D:\Projekty\SRG\bin\Debug\net9.0-windows\SRG.dll
+D:\Projekty\SRG\bin\Debug\net9.0-windows\SRG.pdb
+D:\Projekty\SRG\obj\Debug\net9.0-windows\Serger.MainMenu.resources
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.csproj.GenerateResource.cache
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.GeneratedMSBuildEditorConfig.editorconfig
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.AssemblyInfoInputs.cache
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.AssemblyInfo.cs
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.csproj.CoreCompileInputs.cache
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.dll
+D:\Projekty\SRG\obj\Debug\net9.0-windows\refint\SRG.dll
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.pdb
+D:\Projekty\SRG\obj\Debug\net9.0-windows\SRG.genruntimeconfig.cache
+D:\Projekty\SRG\obj\Debug\net9.0-windows\ref\SRG.dll
