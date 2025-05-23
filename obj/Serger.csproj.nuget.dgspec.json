@@ -13,7 +13,6 @@
         "packagesPath": "C:\\Users\\barta\\.nuget\\packages\\",
         "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger\\obj\\",
         "projectStyle": "PackageReference",
-        "UsingMicrosoftNETSdk": false,
         "configFilePaths": [
           "C:\\Users\\barta\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
