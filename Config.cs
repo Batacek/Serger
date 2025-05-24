@@ -15,7 +15,6 @@ public class Config // Class for configuration variables and values
     public string LANG { get; set; } // Language (currently: en/cz)
     public bool BETA { get; set; }
 
-
     public static Config Load(string filePath = "Config.json")
     {
         if (!File.Exists(filePath))
