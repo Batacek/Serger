@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Projekty\\SRG\\SRG.csproj",
+      "projectUniqueName": "C:\\Users\\bartt\\RiderProjects\\SRG\\SRG.csproj",
       "projectName": "SRG",
-      "projectPath": "D:\\Projekty\\SRG\\SRG.csproj",
+      "projectPath": "C:\\Users\\bartt\\RiderProjects\\SRG\\SRG.csproj",
       "packagesPath": "C:\\Users\\bartt\\.nuget\\packages\\",
-      "outputPath": "D:\\Projekty\\SRG\\obj\\",
+      "outputPath": "C:\\Users\\bartt\\RiderProjects\\SRG\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

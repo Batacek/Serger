@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Serger
+namespace SRG
 {
     public partial class MainMenu : Form
     {
         public MainMenu()
         {
             InitializeComponent();
+        }
+
+        public void Update()
+        {
+            UpdateStatus();
         }
 
         private void button1_Click(object sender, EventArgs e)

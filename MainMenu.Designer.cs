@@ -1,4 +1,4 @@
-﻿namespace Serger
+﻿namespace SRG
 {
     partial class MainMenu
     {
@@ -268,7 +268,7 @@
             this.pingResult.Name = "pingResult";
             this.pingResult.Size = new System.Drawing.Size(51, 20);
             this.pingResult.TabIndex = 13;
-            this.pingResult.Text = "label8";
+            this.pingResult.Text = Pinger.status;
             this.pingResult.Click += new System.EventHandler(this.pingResult_Click);
             // 
             // label7
@@ -305,6 +305,12 @@
             this.pingerPanel.ResumeLayout(false);
             this.pingerPanel.PerformLayout();
             this.ResumeLayout(false);
+        }
+
+        private void UpdateStatus()
+        {
+            // Update the ping result label with the current status
+            this.pingResult.Text = Pinger.status;
         }
 
         #endregion
