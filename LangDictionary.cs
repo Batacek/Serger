@@ -1,16 +1,11 @@
-﻿namespace Serger;
+﻿namespace SRG;
 
-public class LangDictionary // Class for localization variables and values
+public class LangDictionary : Config
 {
-    public string PingText { get; set; }
-    public string Success { get; set; }
-    public string Address { get; set; }
-    public string PingTime { get; set; }
-    public string Fail { get; set; }
-    public string Error { get; set; }
-    public string VersionMis1 { get; set; }
-    public string Version { get; set; }
-    public string InsertCorr1 { get; set; }
-    public string InsertCorr2 { get; set; }
-    public string PressKey { get; set; }
+    public static string PingText = "PingText";
+    public static string Address = "Address";
+    public static string PingTime = "PingTime";
+    public static string Success = "Success";
+    public static string Fail = "Fail";
+    public static string Error = "Error";
 }

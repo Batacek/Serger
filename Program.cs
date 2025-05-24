@@ -1,38 +1,28 @@
-﻿using System.Text.Json;
+using System.Threading.Tasks;
 
-namespace Serger;
+namespace SRG;
 
-class Program
+static class Program
 {
+    /// <summary>
+    ///  The main entry point for the application.
+    /// </summary>
+    [STAThread]
     static async Task Main()
     {
-        Console.WindowHeight = 20; // Window height
-        Console.WindowWidth = 40; // Window width
-
-        var config = Config.Load();
-
-        string langFile = $"{config.LANG}.json";
-
-        // Check if language in config exists, exit if it does not
-        if (!File.Exists(langFile))
+        Thread coreThread = new Thread (() =>
         {
-            Console.WriteLine($"Language does not exist. Change LANG in Config.json. {langFile}");
-            Environment.Exit(0);
-        }
-
-        string jsonLang = File.ReadAllText($"{config.LANG}.json"); // Gets language from Config.json
-        var langOption = LoadLang(jsonLang); // Uses selected language
-
-        config.CheckVer(langOption);
-        while (true)
+            SergerCore.Run().GetAwaiter().GetResult();
+        });
+        Thread updateThread = new Thread (() =>
         {
-            var pinger = new Pinger(Config.Load(), langOption);
-            await pinger.PingAddr();
-        }
-    }
-
-    public static LangDictionary LoadLang(string json)
-    {
-        return JsonSerializer.Deserialize<LangDictionary>(json) ?? throw new InvalidOperationException();
+            while (true)
+            {
+                Thread.Sleep(1000);
+            }
+        });
+        coreThread.Start();
+        Application.Run(new MainMenu());
+        coreThread.Join();
     }
 }
