@@ -15,6 +15,8 @@ public class Config : Main
     public string LANG;// Language (currently: en/cz)
     public bool BETA;
 
+    public Config LoadedConfig;
+
     public Config(string csVer = null, string csVersion = null, string jsonVersion = null, string url = null,
         string jsonVer = null, int pingDelay = default, string lang = null, bool beta = default)
     {
@@ -63,5 +65,14 @@ public class Config : Main
 
         return LoadedConfiguration;
 
+        // Todo: fix creatin 2 objects of Config class
+    }
+
+    public string[] GetConfig()
+    {
+        Config load = new Config();
+        string[] config = {load.CsVer, load.CsVersion, load.JSON_Version, load.URL, load.JSON_VER, load.PING_DELAY.ToString(), load.LANG, load.BETA.ToString()};
+
+        return config;
     }
 }
