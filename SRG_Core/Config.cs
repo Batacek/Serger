@@ -17,24 +17,24 @@ public class Config : Main
 
     public Config LoadedConfig;
 
-    public Config(string csVer = null, string csVersion = null, string jsonVersion = null, string url = null,
-        string jsonVer = null, int pingDelay = default, string lang = null, bool beta = default)
+    public Config(string csVer = null, string csVersion = null, string jsonVersion = null, string url = null, string jsonVer = null, int pingDelay = default, string lang = null, bool beta = default, Config loadedConfig = null)
     {
-        CsVer = csVer ?? throw new ArgumentNullException(nameof(csVer));
-        CsVersion = csVersion ?? throw new ArgumentNullException(nameof(csVersion));
-        JSON_Version = jsonVersion ?? throw new ArgumentNullException(nameof(jsonVersion));
-        URL = url ?? throw new ArgumentNullException(nameof(url));
-        JSON_VER = jsonVer ?? throw new ArgumentNullException(nameof(jsonVer));
+        CsVer = csVer;
+        CsVersion = csVersion;
+        JSON_Version = jsonVersion;
+        URL = url;
+        JSON_VER = jsonVer;
         PING_DELAY = pingDelay;
-        LANG = lang ?? throw new ArgumentNullException(nameof(lang));
+        LANG = lang;
         BETA = beta;
+        LoadedConfig = loadedConfig;
     }
 
-    private Config LoadConfig()
+    public void LoadConfig()
     {
         if (!File.Exists("Config.json"))
         {
-            // Add code to create a default config file
+            // ToDo: code to create a default config file
         }
 
         string jsonConfig = File.ReadAllText("Config.json");
@@ -51,21 +51,6 @@ public class Config : Main
             LANG = loadedConfig.LANG;
             BETA = loadedConfig.BETA;
         }
-
-        Config LoadedConfiguration = new Config(
-            CsVer,
-            CsVersion,
-            JSON_Version,
-            URL,
-            JSON_VER,
-            PING_DELAY,
-            LANG,
-            BETA
-        );
-
-        return LoadedConfiguration;
-
-        // Todo: fix creatin 2 objects of Config class
     }
 
     public string[] GetConfig()
