@@ -8,4 +8,4 @@ public class Program
 
         MainConfig.LoadConfig();
     }
-}
+};
