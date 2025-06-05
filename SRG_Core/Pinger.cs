@@ -17,12 +17,12 @@ public class Pinger : Main
     {
         try
         {
-            PingReply reply = new Ping().Send(_config.URL); // Ping
+            PingReply reply = new Ping().Send(_config.Url); // Ping
             Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.ffff")}"); // Date and time
             if (reply.Status == IPStatus.Success) // if condition for success case
             {
                 // Printing the info into console window and log file
-                Log.PrintLog($"Ping {_config.URL} Success.");
+                Log.PrintLog($"Ping {_config.Url} Success.");
                 Log.PrintLog($"Address: {reply.Address}");
                 Log.PrintLog($"Ping time: {reply.RoundtripTime} ms");
                 Log.PrintLog($"TTL: {reply.Options.Ttl}\n");
@@ -30,17 +30,17 @@ public class Pinger : Main
             else
             {
                 Log.PrintLog($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
-                Log.PrintLog($"Ping {_config.URL} Fail: {reply.Status}");
+                Log.PrintLog($"Ping {_config.Url} Fail: {reply.Status}");
             }
         }
         catch (Exception ex)
         {
             Console.WriteLine(
-                $"Ping {_config.URL} Fail. \nError: {ex.Message}"); // Printout the error message
+                $"Ping {_config.Url} Fail. \nError: {ex.Message}"); // Printout the error message
             Console.WriteLine();
         }
 
-        await Task.Delay(_config.PING_DELAY); // Pause between pings
+        await Task.Delay(_config.PingDelay); // Pause between pings
     }
 
 }

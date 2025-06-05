@@ -30,7 +30,7 @@ The GUI will soon include Windows notifications and tray icon features.
 - 🛠️Windows tray icon
 - 🛠️Languages (en, cs)
 - ❌Wiki
-- 🛠️️️GUI
+- 🛠️️️GUI (MAUI)
 - ❌Linux support
 - ❌API support
 - ❌Ping server software (1 server for pinging multiple IPs, sending notification to 1 computer)
