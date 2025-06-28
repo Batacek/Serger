@@ -2,7 +2,7 @@
 
 ![Static Badge](https://img.shields.io/badge/Language-C%23-blue)
 ![Static Badge](https://img.shields.io/badge/License-Custom-green)
-![Static Badge](https://img.shields.io/badge/Version-Beta%200.2.0-purple)
+![Static Badge](https://img.shields.io/badge/Version-Beta%200.2.1-purple)
 
 <h1>What is it for?</h1>
 <i>Do you have some sort of server and you're worried about its availability? For example, do you have a website and you're worried that your visitors won't be able to visit it?</i>
@@ -19,18 +19,19 @@ This program will notify you if there are any troubles with your server. Right n
 <h1>GUI</h1>
 Right now the GUI is under development and will be released with version Beta 0.3.0. The first stable GUI release will be version 1.0.0.
 <br>
-The GUI will be made in MAUI and will be available for Windows and MacOS. Linux support will be without GUI but we plan to include WPF app for Linux. MAUI supports Android and iOS, but We don't plan to make a mobile app in the near future.
+The GUI will be made in MAUI or UNO and will be available for Windows and MacOS and Linux. MAUI and Uno support Android and iOS, but We don't plan to make a mobile app in the near future.
 <br>
 The GUI will soon include Windows notifications and tray icon features.
 
-# TODO
+# ToDo
 - ✅Logs
 - ~~❌CLI commands~~ **(cancelled)**
 - 🛠️Windows notifications
 - 🛠️Windows tray icon
-- 🛠️Languages (en, cs)
+- ❗Languages (en, cs)
+  - Language class needs to be refactored a lot, and it will be done soon **in the version 0.2.2**
 - ❌Wiki
-- 🛠️️️GUI (MAUI)
+- 🛠️️️GUI (MAUI or Uno)
 - ❌Linux support
-- ❌API support
 - ❌Ping server software (1 server for pinging multiple IPs, sending notification to 1 computer)
+- ❌API support
