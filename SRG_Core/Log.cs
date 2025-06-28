@@ -1,6 +1,6 @@
 ﻿namespace SRG_Core;
 
-public class Log : Main
+public class Log
 {
     private static readonly string LogFile = $"{DateTime.Now:dd_MM_yyyy}.log";
     private static readonly string LogAllFile = $"{DateTime.Now:dd_MM_yyyy}_ALL.log";

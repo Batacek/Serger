@@ -1,38 +1,29 @@
-﻿using System.Text.Json;
+﻿using SRG_Core;
 
 namespace Serger;
 
-class Program
+public class Program
 {
-    static async Task Main()
+    private static void init()
     {
-        Console.WindowHeight = 20; // Window height
-        Console.WindowWidth = 40; // Window width
+        // Initialize the configuration
+        Config config = new Config();
+        config.LoadConfig();
 
-        var config = Config.Load();
+        // Initialize the logger
+        Log.PrintLog($"Serger started with CS Version: {config.CsVersion}, JSON Version: {config.JsonVersion}");
 
-        string langFile = $"{config.LANG}.json";
+        // Initialize the pinger
+        Pinger pinger = new Pinger(config);
 
-        // Check if language in config exists, exit if it does not
-        if (!File.Exists(langFile))
-        {
-            Console.WriteLine($"Language does not exist. Change LANG in Config.json. {langFile}");
-            Environment.Exit(0);
-        }
-
-        string jsonLang = File.ReadAllText($"{config.LANG}.json"); // Gets language from Config.json
-        var langOption = LoadLang(jsonLang); // Uses selected language
-
-        config.CheckVer(langOption);
+        // Start pinging
         while (true)
         {
-            var pinger = new Pinger(Config.Load(), langOption);
-            await pinger.PingAddr();
+            pinger.PingAddr().GetAwaiter().GetResult();
         }
     }
-
-    public static LangDictionary LoadLang(string json)
+    public static void Main(string[] args)
     {
-        return JsonSerializer.Deserialize<LangDictionary>(json) ?? throw new InvalidOperationException();
+        init();
     }
 }

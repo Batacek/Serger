@@ -1,11 +1,11 @@
 {
   "version": 3,
   "targets": {
-    "net6.0": {}
+    "net9.0": {}
   },
   "libraries": {},
   "projectFileDependencyGroups": {
-    "net6.0": []
+    "net9.0": []
   },
   "packageFolders": {
     "C:\\Users\\barta\\.nuget\\packages\\": {}
@@ -13,24 +13,25 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
+      "projectUniqueName": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj",
       "projectName": "Serger",
-      "projectPath": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
+      "projectPath": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj",
       "packagesPath": "C:\\Users\\barta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger\\obj\\",
+      "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\barta\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
-        "net6.0"
+        "net9.0"
       ],
       "sources": {
+        "C:\\Users\\barta\\.dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net6.0": {
-          "targetAlias": "net6.0",
+        "net9.0": {
+          "targetAlias": "net9.0",
           "projectReferences": {}
         }
       },
@@ -38,11 +39,17 @@
         "warnAsError": [
           "NU1605"
         ]
-      }
+      },
+      "restoreAuditProperties": {
+        "enableAudit": "true",
+        "auditLevel": "low",
+        "auditMode": "direct"
+      },
+      "SdkAnalysisLevel": "9.0.300"
     },
     "frameworks": {
-      "net6.0": {
-        "targetAlias": "net6.0",
+      "net9.0": {
+        "targetAlias": "net9.0",
         "imports": [
           "net461",
           "net462",
@@ -59,7 +66,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Users\\barta\\.dotnet\\sdk\\6.0.428\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Users\\barta\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

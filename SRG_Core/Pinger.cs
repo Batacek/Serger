@@ -2,7 +2,7 @@
 
 namespace SRG_Core;
 
-public class Pinger : Main
+public class Pinger
 {
     private readonly Config _config;
     //private readonly LangDictionary _langDictionary;
@@ -19,9 +19,9 @@ public class Pinger : Main
         {
             PingReply reply = new Ping().Send(_config.Url); // Ping
             Console.WriteLine($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss.ffff")}"); // Date and time
-            if (reply.Status == IPStatus.Success) // if condition for success case
+            if (reply.Status == IPStatus.Success) // if condition for success cases
             {
-                // Printing the info into console window and log file
+                // Printing the info into the console window and log file
                 Log.PrintLog($"Ping {_config.Url} Success.");
                 Log.PrintLog($"Address: {reply.Address}");
                 Log.PrintLog($"Ping time: {reply.RoundtripTime} ms");
@@ -35,9 +35,8 @@ public class Pinger : Main
         }
         catch (Exception ex)
         {
-            Console.WriteLine(
-                $"Ping {_config.Url} Fail. \nError: {ex.Message}"); // Printout the error message
-            Console.WriteLine();
+            Log.PrintLog($"Ping {_config.Url} Fail. \nError: {ex.Message}"); // Printout the error message
+
         }
 
         await Task.Delay(_config.PingDelay); // Pause between pings
