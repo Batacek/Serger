@@ -1,0 +1,13 @@
+{
+  "PingText": "Ping to",
+  "Success": "was succesful",
+  "Address": "Address",
+  "PingTime": "Ping (response time)",
+  "Fail": "failed",
+  "Error": "Error",
+  "VersionMis1": "Version mismatch",
+  "Version": "version",
+  "InsertCorr1": "Please insert correct version of Config file to prevent issues",
+  "PressKey": "Press any key to continue",
+  "InsertCorr2": "Some functions may be unavaible because of the version differences"
+}

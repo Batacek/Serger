@@ -1,16 +1,16 @@
 ﻿using System.Net.NetworkInformation;
 
-namespace SRG_Core;
+namespace Serger.SRG_Core;
 
 public class Pinger
 {
     private readonly Config _config;
-    //private readonly LangDictionary _langDictionary;
+    private readonly Lang _lang;
 
-    public Pinger(Config config)
+    public Pinger(Config config, Lang lang)
     {
         this._config = config;
-        //_langDictionary = langDictionary;
+        this._lang = lang;
     }
 
     public async Task PingAddr()
@@ -22,24 +22,22 @@ public class Pinger
             if (reply.Status == IPStatus.Success) // if condition for success cases
             {
                 // Printing the info into the console window and log file
-                Log.PrintLog($"Ping {_config.Url} Success.");
-                Log.PrintLog($"Address: {reply.Address}");
-                Log.PrintLog($"Ping time: {reply.RoundtripTime} ms");
+                Log.PrintLog($"{_lang.PingText} {_config.Url} {_lang.Success}.");
+                Log.PrintLog($"{_lang.Address}: {reply.Address}");
+                Log.PrintLog($"{_lang.PingTime}: {reply.RoundtripTime} ms");
                 Log.PrintLog($"TTL: {reply.Options.Ttl}\n");
             }
             else
             {
                 Log.PrintLog($"{DateTime.Now.ToString("dd/MM/yyyy HH:mm:ss")}");
-                Log.PrintLog($"Ping {_config.Url} Fail: {reply.Status}");
+                Log.PrintLog($"{_lang.PingText} {_config.Url} {_lang.Fail}: {reply.Status}");
             }
         }
         catch (Exception ex)
         {
-            Log.PrintLog($"Ping {_config.Url} Fail. \nError: {ex.Message}"); // Printout the error message
-
+            Log.PrintLog($"{_lang.PingText} {_config.Url} {_lang.Fail}. \n{_lang.Error}: {ex.Message}"); // Printout the error message
         }
 
         await Task.Delay(_config.PingDelay); // Pause between pings
     }
-
 }

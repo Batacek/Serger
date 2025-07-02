@@ -1,78 +1,107 @@
-﻿using System.Text.Json;
+using System.Text.Json;
+using System.Text.Json.Serialization;
 
-namespace SRG_Core;
+namespace Serger.SRG_Core;
 
 public class Config
 {
-    public string CsVer; // CS Program file version (X.y.X)
-    public string CsVersion; // CS Program file version (X.X.y)
+    [JsonIgnore]
+    public string CsVer { get; set; } // CS Program file version (X.y.X)
+    [JsonIgnore]
+    public string CsVersion { get; set; } // CS Program file version (X.X.y)
 
     // X = ignore Y = check for differences
-    public string JsonVersion;// JSON config file version (X.X.y)
-    public string Url;// URL from the JSON config file
-    public string JsonVer;// JSON config file version (X.y.X)
-    public int PingDelay;// Pause lenght between pings (in ms)
-    public string Lang;// Language (currently: en/cz)
-    public bool Beta;
+    [JsonPropertyName("JSON_Version")]
+    public string JsonVersion { get; set; } // JSON config file version (X.X.y)
 
-    public Config LoadedConfig;
+    [JsonPropertyName("URL")]
+    public string Url { get; set; } // URL from the JSON config file
 
-    public Config(string csVer = null, string csVersion = null, string jsonVersion = null, string url = null, string jsonVer = null, int pingDelay = default, string lang = null, bool beta = default, Config loadedConfig = null)
+    [JsonPropertyName("JSON_VER")]
+    public string JsonVer { get; set; } // JSON config file version (X.y.X)
+
+    [JsonPropertyName("PING_DELAY")]
+    public int PingDelay { get; set; } // Pause length between pings (in ms)
+
+    [JsonPropertyName("LANG")]
+    public string Lang { get; set; } // Language (currently: en/cs)
+
+    [JsonPropertyName("DEV_MODE")]
+    public bool Beta { get; set; }
+
+    [JsonPropertyName("CLI_EN")]
+    public bool CliEnabled { get; set; }
+
+    [JsonPropertyName("MULTITASKING")]
+    public bool Multitasking { get; set; }
+
+    public Config()
     {
-        CsVer = csVer;
-        CsVersion = csVersion;
-        JsonVersion = jsonVersion;
-        Url = url;
-        JsonVer = jsonVer;
-        PingDelay = pingDelay;
-        Lang = lang;
-        Beta = beta;
-        LoadedConfig = loadedConfig;
+        // Default values
+        CsVer = "0.2";
+        CsVersion = "0.2.2";
+        JsonVer = "0.2";
+        JsonVersion = "0.2.2";
+        Url = "127.0.0.1";
+        PingDelay = 10000;
+        Lang = "en";
+        Beta = false;
+        CliEnabled = false;
+        Multitasking = false;
     }
 
     public void LoadConfig()
     {
         if (!File.Exists("Config.json"))
         {
-            // ToDo: code to create a default config file
-            this.CsVer = "0.2";
-            this.CsVersion = "0.2.1";
-            this.JsonVer = "0.2";
-            this.JsonVersion = "0.2.1";
-            this.Url = "127.0.0.1";
-            this.PingDelay = 10000;
-            this.Lang = "en";
-            this.Beta = false;
+            // Create a default config file
+            var options = new JsonSerializerOptions 
+            { 
+                WriteIndented = true 
+            };
+
+            string jsonString = JsonSerializer.Serialize(this, options);
+            File.WriteAllText("Config.json", jsonString);
+            Console.WriteLine("Created new Config.json with default values.");
+            return;
         }
 
-        if (File.Exists("Config.json"))
+        try
         {
             string jsonConfig = File.ReadAllText("Config.json");
             var loadedConfig = JsonSerializer.Deserialize<Config>(jsonConfig);
 
             if (loadedConfig != null)
             {
-                this.CsVer = "0.2";
-                this.CsVersion = "0.2.1";
-                this.JsonVer = loadedConfig.JsonVer;
-                this.JsonVersion = loadedConfig.JsonVersion;
-                this.Url = loadedConfig.Url;
-                this.PingDelay = loadedConfig.PingDelay;
-                this.Lang = loadedConfig.Lang;
-                this.Beta = loadedConfig.Beta;
-            }
-            else
-            {
-                this.CsVer = "0.2";
-                this.CsVersion = "0.2.1";
-                this.JsonVer = "0.2";
-                this.JsonVersion = "0.2.1";
-                this.Url = "127.0.0.1";
-                this.PingDelay = 10000;
-                this.Lang = "en";
-                this.Beta = false;
+                JsonVer = loadedConfig.JsonVer;
+                JsonVersion = loadedConfig.JsonVersion;
+                Url = loadedConfig.Url;
+                PingDelay = loadedConfig.PingDelay;
+                Lang = loadedConfig.Lang;
+                Beta = loadedConfig.Beta;
+                CliEnabled = loadedConfig.CliEnabled;
+                Multitasking = loadedConfig.Multitasking;
+
+                Console.WriteLine("Config loaded successfully from Config.json.");
             }
         }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error loading configuration: {ex.Message}");
+            Console.WriteLine("Using default values.");
+        }
     }
-    
+
+    public void ReadConfig()
+    {
+        Console.WriteLine("Current Configuration:");
+        Console.WriteLine($"CS Version: {CsVersion} ({CsVer})");
+        Console.WriteLine($"JSON Version: {JsonVersion} ({JsonVer})");
+        Console.WriteLine($"URL: {Url}");
+        Console.WriteLine($"Ping Delay: {PingDelay}ms");
+        Console.WriteLine($"Language: {Lang}");
+        Console.WriteLine($"Developer Mode: {Beta}");
+        Console.WriteLine($"CLI Enabled: {CliEnabled}");
+        Console.WriteLine($"Multitasking: {Multitasking}");
+    }
 }

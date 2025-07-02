@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj": {}
+    "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj": {}
   },
   "projects": {
-    "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj": {
+    "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj",
+        "projectUniqueName": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
         "projectName": "Serger",
-        "projectPath": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\Serger.csproj",
+        "projectPath": "C:\\Users\\barta\\RiderProjects\\Serger\\Serger.csproj",
         "packagesPath": "C:\\Users\\barta\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger_negr\\obj\\",
+        "outputPath": "C:\\Users\\barta\\RiderProjects\\Serger\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\barta\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -20,8 +20,9 @@
           "net9.0"
         ],
         "sources": {
-          "C:\\Users\\barta\\.dotnet\\library-packs": {},
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files\\dotnet\\library-packs": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://pkgs.dev.azure.com/dnceng/public/_packaging/dotnet9/nuget/v3/index.json": {}
         },
         "frameworks": {
           "net9.0": {
@@ -60,7 +61,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Users\\barta\\.dotnet\\sdk\\9.0.301/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.300/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

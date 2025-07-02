@@ -1,4 +1,4 @@
-﻿namespace SRG_Core;
+﻿namespace Serger.SRG_Core;
 
 public class Log
 {
