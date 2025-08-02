@@ -92,6 +92,12 @@ public class Config
         }
     }
 
+    public void SaveConfig(Config config)
+    {
+        // ToDo: Implement saving configuration to Config.json
+        return;
+    }
+
     public void ReadConfig()
     {
         Console.WriteLine("Current Configuration:");
