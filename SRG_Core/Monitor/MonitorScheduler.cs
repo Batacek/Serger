@@ -83,7 +83,7 @@ public class MonitorScheduler(Lang lang) : IDisposable
             _ => monitor.GetType().Name
         };
         
-        Log.PrintLog($"[{timestamp:yyyy-MM-dd HH:mm:ss}] {monitorType} {monitor.Host}: {status}");
+        Log.PrintLog($"[{timestamp:yyyy-MM-dd HH:mm:ss}] {monitorType} {monitor.GetDisplayName()}: {status}");
         MonitorResult?.Invoke(this, new MonitorResultEventArgs(monitor, isUp, timestamp));
     }
 

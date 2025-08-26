@@ -4,9 +4,6 @@ namespace Serger.SRG_Core.Config;
 
 public class HttpMonitor : Monitor
 {
-
-    public string Host => Uri;
-
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
     
@@ -22,7 +19,7 @@ public class HttpMonitor : Monitor
     }
     
     public HttpMonitor(int checkInterval, int timeout, string uri, List<int>? validResponseCodes = null, string? bodyRegexp = null) 
-        : base("", checkInterval, timeout)
+        : base(checkInterval, timeout)
     {
         Uri = uri;
         ValidResponseCodes = validResponseCodes;
@@ -59,4 +56,8 @@ public class HttpMonitor : Monitor
         }
     }
     
+    public override string GetDisplayName()
+    {
+        return Uri;
+    }
 }

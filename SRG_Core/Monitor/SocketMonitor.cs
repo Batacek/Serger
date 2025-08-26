@@ -5,6 +5,8 @@ namespace Serger.SRG_Core.Config;
 
 public class SocketMonitor : Monitor
 {
+    [JsonPropertyName("host")]
+    public string Host { get; set; } = "";
     
     [JsonPropertyName("port")]
     public int Port { get; set; }
@@ -12,8 +14,9 @@ public class SocketMonitor : Monitor
     public SocketMonitor() { }
     
     public SocketMonitor(string host, int checkInterval, int timeout, int port) 
-        : base(host, checkInterval, timeout)
+        : base(checkInterval, timeout)
     {
+        Host = host;
         Port = port;
     }
     
@@ -33,4 +36,8 @@ public class SocketMonitor : Monitor
         }
     }
     
+    public override string GetDisplayName()
+    {
+        return $"{Host}:{Port}";
+    }
 }

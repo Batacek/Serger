@@ -8,9 +8,6 @@ namespace Serger.SRG_Core.Config;
 [JsonDerivedType(typeof(HttpMonitor), "http")]
 public abstract class Monitor
 {
-    [JsonPropertyName("host")]
-    public string Host { get; set; } = "";
-
     [JsonPropertyName("check_interval")]
     public int CheckInterval { get; set; }
     
@@ -19,13 +16,14 @@ public abstract class Monitor
     
     protected Monitor() { }
     
-    protected Monitor(string host, int checkInterval, int timeout)
+    protected Monitor(int checkInterval, int timeout)
     {
-        Host = host;
         CheckInterval = checkInterval;
         Timeout = timeout;
     }
     
     public abstract bool IsUp();
+    
+    public abstract string GetDisplayName();
     
 }
