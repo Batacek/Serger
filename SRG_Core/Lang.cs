@@ -40,26 +40,34 @@ public class Lang
 
     public static Lang LoadLang(string langCode)
     {
-        var langFile = $"Langs/{langCode}.json";
-
-        // Check if the language file exists
-        if (!File.Exists(langFile))
+        // Prefer per-user app data Langs directory
+        var langsDir = CorePaths.GetLangsDirectory();
+        var candidatePaths = new[]
         {
-            Console.WriteLine($"Language file not found: {langFile}. Using default language.");
+            Path.Combine(langsDir, $"{langCode}.json"),
+            Path.Combine(AppContext.BaseDirectory ?? string.Empty, "Langs", $"{langCode}.json")
+        };
+
+        string? langFile = null;
+        foreach (var p in candidatePaths)
+        {
+            if (File.Exists(p)) { langFile = p; break; }
+        }
+
+        if (langFile == null)
+        {
+            Console.WriteLine($"Language file not found for '{langCode}'. Using default language.");
             return new Lang();
         }
 
         try
         {
             var jsonLang = File.ReadAllText(langFile);
-
             var loadedLang = JsonSerializer.Deserialize<Lang>(jsonLang, Options);
-
             if (loadedLang != null)
             {
                 return loadedLang;
             }
-
             Console.WriteLine("Failed to deserialize language file. Using default language.");
             return new Lang();
         }

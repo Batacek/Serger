@@ -47,18 +47,30 @@ public class Config
     
     public void LoadConfig(Lang? lang = null)
     {
-        if (!File.Exists("Config.json"))
+        var path = Serger.SRG_Core.CorePaths.GetConfigFilePath();
+        var dir = Path.GetDirectoryName(path)!;
+        Directory.CreateDirectory(dir);
+
+        if (!File.Exists(path))
         {
             var jsonString = JsonSerializer.Serialize(this, Options);
-            File.WriteAllText("Config.json", jsonString);
-            var message = lang?.ConfigNotFound ?? "Created new Config.json with default values.";
-            Console.WriteLine(message);
+            try
+            {
+                File.WriteAllText(path, jsonString);
+                var message = lang?.ConfigNotFound ?? $"Created new config with default values at {path}.";
+                Console.WriteLine(message);
+            }
+            catch (Exception ex)
+            {
+                var errorMessage = lang?.ConfigSaveError ?? "Error saving configuration";
+                Console.WriteLine($"{errorMessage}: {ex.Message}");
+            }
             return;
         }
 
         try
         {
-            var jsonConfig = File.ReadAllText("Config.json");
+            var jsonConfig = File.ReadAllText(path);
             var loadedConfig = JsonSerializer.Deserialize<Config>(jsonConfig);
 
             if (loadedConfig == null) return;
@@ -71,9 +83,9 @@ public class Config
             Beta = loadedConfig.Beta;
             CliEnabled = loadedConfig.CliEnabled;
             Multitasking = loadedConfig.Multitasking;
-            Monitors = loadedConfig.Monitors;
+            Monitors = loadedConfig.Monitors ?? new List<Monitor>();
 
-            var message = lang?.ConfigLoaded ?? "Config loaded successfully from Config.json.";
+            var message = lang?.ConfigLoaded ?? $"Config loaded successfully from {path}.";
             Console.WriteLine(message);
         }
         catch (Exception ex)
@@ -88,9 +100,12 @@ public class Config
     {
         try
         {
+            var path = Serger.SRG_Core.CorePaths.GetConfigFilePath();
+            var dir = Path.GetDirectoryName(path)!;
+            Directory.CreateDirectory(dir);
             var jsonString = JsonSerializer.Serialize(this, Options);
-            File.WriteAllText("Config.json", jsonString);
-            var message = lang?.ConfigSaved ?? "Config saved successfully to Config.json";
+            File.WriteAllText(path, jsonString);
+            var message = lang?.ConfigSaved ?? $"Config saved successfully to {path}";
             Console.WriteLine(message);
         }
         catch (Exception ex)

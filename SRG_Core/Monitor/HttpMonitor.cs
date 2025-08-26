@@ -4,7 +4,9 @@ namespace Serger.SRG_Core.Config;
 
 public class HttpMonitor : Monitor
 {
-    
+
+    public string Host => Uri;
+
     [JsonPropertyName("uri")]
     public string Uri { get; set; }
     
@@ -33,7 +35,8 @@ public class HttpMonitor : Monitor
         {
             using var client = new HttpClient();
             client.Timeout = TimeSpan.FromMilliseconds(Timeout);
-            var response = client.GetAsync(Uri).Result;
+            // Avoid .Result deadlocks by using GetAwaiter().GetResult on the background timer thread
+            var response = client.GetAsync(Uri, HttpCompletionOption.ResponseHeadersRead).GetAwaiter().GetResult();
             
             // Check response code if ValidResponseCodes is specified
             if (ValidResponseCodes != null && ValidResponseCodes.Count != 0)
@@ -45,7 +48,7 @@ public class HttpMonitor : Monitor
             // Check body regex if BodyRegexp is specified
             if (string.IsNullOrEmpty(BodyRegexp)) return true;
             
-            var content = response.Content.ReadAsStringAsync().Result;
+            var content = response.Content.ReadAsStringAsync().GetAwaiter().GetResult();
             
             return System.Text.RegularExpressions.Regex.IsMatch(content, BodyRegexp);
 
