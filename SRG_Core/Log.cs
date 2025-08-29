@@ -1,10 +1,12 @@
-﻿namespace Serger.SRG_Core;
+﻿using System.IO;
+
+namespace Serger.SRG_Core;
 
 public static class Log
 {
     
-    private static readonly string LogFile = $"{DateTime.Now:dd_MM_yyyy}.log";
-    private static readonly string LogAllFile = $"{DateTime.Now:dd_MM_yyyy}_ALL.log";
+    private static readonly string LogFile = Path.Combine(CorePaths.EnsureDirectory("Logs"), $"{DateTime.Now:dd_MM_yyyy}.log");
+    private static readonly string LogAllFile = Path.Combine(CorePaths.EnsureDirectory("Logs"), $"{DateTime.Now:dd_MM_yyyy}_ALL.log");
 
     // Provides logging functionality for writing messages to daily log files without console output
     // Use this method for error messages and important information only
