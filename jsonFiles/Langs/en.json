@@ -1,0 +1,22 @@
+{
+  "Error": "Error",
+  "Success": "Success",
+  "LanguageLoaded": "Language loaded",
+  "SergerStarted": "Serger started",
+  "ConfigLoaded": "Config loaded successfully",
+  "ConfigSaved": "Config saved successfully",
+  "ConfigNotFound": "Config file not found, created default",
+  "ConfigLoadError": "Error loading configuration",
+  "ConfigSaveError": "Error saving configuration",
+  "MonitorUp": "UP",
+  "MonitorDown": "DOWN",
+  "MonitorExecuteError": "Error executing monitor",
+  "MonitorsLoaded": "monitors loaded from",
+  "MonitorsSaved": "monitors saved to",
+  "MonitorLoadError": "Error loading monitor configuration",
+  "MonitorSaveError": "Error saving monitor configuration",
+  "MonitorConfigNotFound": "Monitor config file not found",
+  "PingMonitor": "Ping",
+  "HttpMonitor": "HTTP",
+  "SocketMonitor": "Socket"
+}

@@ -1,38 +1,79 @@
-﻿using System.Text.Json;
+﻿using Serger.SRG_Core;
+using Serger.SRG_Core.Config;
 
 namespace Serger;
 
-class Program
+public abstract class Program
 {
-    static async Task Main()
+    private static Lang LoadLanguage(Config config)
     {
-        Console.WindowHeight = 20; // Window height
-        Console.WindowWidth = 40; // Window width
+        // Load language based on config setting
+        var lang = Lang.LoadLang(config.Lang);
 
-        var config = Config.Load();
+        // Log the language loading
+        Log.PrintLog($"{lang.LanguageLoaded}: {config.Lang}");
 
-        string langFile = $"{config.LANG}.json";
+        return lang;
+    }
 
-        // Check if language in config exists, exit if it does not
-        if (!File.Exists(langFile))
+    private static void Init()
+    {
+        // Initialize the configuration
+        var config = new Config();
+        
+        // Load config first without language (will use fallback messages)
+        config.LoadConfig();
+        
+        // Load language
+        var lang = LoadLanguage(config);
+        
+        // Initialize the logger
+        Log.PrintLog($"{lang.SergerStarted} - CS Version: {config.CsVersion}, JSON Version: {config.JsonVersion}");
+
+        // Display current configuration
+        config.ReadConfig();
+
+        // Initialize the monitor scheduler
+        var scheduler = new MonitorScheduler(lang);
+        
+        // Subscribe to monitor results (they are already logged by scheduler)
+        scheduler.MonitorResult += (_, _) => {
+            // Additional processing can be added here if needed
+        };
+
+        // Add some example monitors to config if none exist
+        if (config.Monitors.Count == 0)
         {
-            Console.WriteLine($"Language does not exist. Change LANG in Config.json. {langFile}");
-            Environment.Exit(0);
+            config.Monitors.Add(new PingMonitor("8.8.8.8", 30000, 5000));
+            config.Monitors.Add(new HttpMonitor(60000, 10000, "https://www.batacek.eu", [200], null));
+            config.Monitors.Add(new SocketMonitor("8.8.8.8", 45000, 5000, 53));
+            
+            // Save the updated config
+            config.SaveConfig(lang);
         }
+        
+        // Start monitoring
+        scheduler.UpdateMonitors(config.Monitors);
+        
+        Log.PrintLog("Monitor scheduler started. Press Ctrl+C to exit.");
 
-        string jsonLang = File.ReadAllText($"{config.LANG}.json"); // Gets language from Config.json
-        var langOption = LoadLang(jsonLang); // Uses selected language
-
-        config.CheckVer(langOption);
+        // Keep the application running
         while (true)
         {
-            var pinger = new Pinger(Config.Load(), langOption);
-            await pinger.PingAddr();
+            Thread.Sleep(1000);
         }
     }
 
-    public static LangDictionary LoadLang(string json)
+    public static void Main(string[] args)
     {
-        return JsonSerializer.Deserialize<LangDictionary>(json) ?? throw new InvalidOperationException();
+        try
+        {
+            Init();
+        }
+        catch (Exception ex)
+        {
+            Log.WriteLog($"Fatal error: {ex.Message}");
+            Console.WriteLine($"Fatal error occurred. Check logs for details.");
+        }
     }
 }

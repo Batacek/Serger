@@ -1,8 +1,12 @@
 {
   "version": 2,
-  "dgSpecHash": "8YZnNu/eKj0=",
+  "dgSpecHash": "tsk0TePaDKs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\bartt\\RiderProjects\\SRG\\Serger.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "/Volumes/Disk/SergerGUI/Serger/Serger.csproj",
+  "expectedPackageFiles": [
+    "/Users/raixo/.nuget/packages/microsoft.netcore.app.ref/9.0.6/microsoft.netcore.app.ref.9.0.6.nupkg.sha512",
+    "/Users/raixo/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.6/microsoft.aspnetcore.app.ref.9.0.6.nupkg.sha512",
+    "/Users/raixo/.nuget/packages/microsoft.netcore.app.host.osx-arm64/9.0.6/microsoft.netcore.app.host.osx-arm64.9.0.6.nupkg.sha512"
+  ],
   "logs": []
 }

@@ -1,0 +1,22 @@
+{
+  "Error": "Chyba",
+  "Success": "Úspěch",
+  "LanguageLoaded": "Jazyk načten",
+  "SergerStarted": "Serger spuštěn",
+  "ConfigLoaded": "Konfigurace úspěšně načtena",
+  "ConfigSaved": "Konfigurace úspěšně uložena",
+  "ConfigNotFound": "Konfigurační soubor nenalezen, vytvořen výchozí",
+  "ConfigLoadError": "Chyba při načítání konfigurace",
+  "ConfigSaveError": "Chyba při ukládání konfigurace",
+  "MonitorUp": "ONLINE",
+  "MonitorDown": "OFFLINE",
+  "MonitorExecuteError": "Chyba při spuštění monitoru",
+  "MonitorsLoaded": "monitorů načteno z",
+  "MonitorsSaved": "monitorů uloženo do",
+  "MonitorLoadError": "Chyba při načítání konfigurace monitorů",
+  "MonitorSaveError": "Chyba při ukládání konfigurace monitorů",
+  "MonitorConfigNotFound": "Konfigurační soubor monitorů nenalezen",
+  "PingMonitor": "Ping",
+  "HttpMonitor": "HTTP",
+  "SocketMonitor": "Socket"
+}
