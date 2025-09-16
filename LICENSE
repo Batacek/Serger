@@ -1,15 +1,32 @@
-        Serger Custom License Copyright (c) 2025 Tomáš Barták
+# Serger Library License Copyright (c) 2025 Tomáš Barták  
 
+1. **Scope of Use**: The Serger Library is provided for personal and educational purposes. Commercial use is only allowed with prior written permission from the author. Such permission may be time-limited or restricted.  
 
+2. **Redistribution**: Redistribution of the library, whether original or modified, is not allowed without permission from the author.  
 
-1. **Non-Commercial Use**: The software "Serger" is licensed solely for non-commercial use. You are not permitted to use, distribute, or modify the software for any commercial purpose. 
+3. **Modification**: You may modify the library for personal use only. Distribution of modified versions is prohibited unless permission is granted by the author. In case of modification, it is forbidden to change or remove the library’s original name, branding, icons, or other identifying elements.  
 
-2. **Distribution Restriction**: You are not allowed to distribute, share, or republish the software or any modified versions of it, except by contacting the author, Tomáš Barták, and requesting the inclusion of your modifications in the official version of the software. 
+4. **Branding and Attribution**: The Serger branding (name, logo, icons, and other visual or identity elements) must remain unchanged in the library and in any project using the library. The branding must not be used outside of the official library or official applications without permission from the author. Custom branding in relation to the library is only allowed with permission from the author.  
 
-3. **Modification Allowed**: You are permitted to modify the software for your own personal use, but you must not publish or distribute the modified version without the author's explicit permission. 
+5. **Commercial Restrictions**: Selling software or services based on the library is prohibited unless the author explicitly allows it.  
 
-4. **Patent Restrictions**: You are not allowed to apply for or hold any patents related to the software or any of its components. 
+6. **Integration Restrictions**: The library may only be integrated into projects intended for personal or educational purposes, unless the author grants an exception.  
 
-5. **Disclaimer of Warranty**: The software is provided "as is" without warranty of any kind, either expressed or implied, including, but not limited to, the implied warranties of merchantability and fitness for a particular purpose. 
+7. **Binding Clause for Projects Using the Library**: Any project that integrates the Serger Library automatically inherits these license terms. The author of such a project must ensure that users of the project are informed about and comply with this license. The author reserves the right to revoke the license for users who repeatedly or seriously violate its terms.  
 
-6. **Limitation of Liability**: In no event shall the author, Tomáš Barták, be liable for any claim, damages, or other liability, whether in an action of contract, tort, or otherwise, arising from, out of, or in connection with the software or the use or other dealings in the software. By using the "Serger" software, you agree to the terms and conditions outlined in this custom license.
+8. **Ownership and Licensing Authority**: The Serger Library and all its intellectual property, including source code, branding, and associated materials, are the exclusive property of Tomáš Barták. The author retains full authority to grant, deny, or revoke permissions to use.  
+
+8a. **Contributors and Licensing Authority**: While the Serger Library may include contributions from multiple authors, only the main author, Tomáš Barták, holds the exclusive right to grant, deny, or revoke permissions related to the use, modification, or distribution of the library.  
+
+9. **General Permission Clause**: Any rights not explicitly granted by this license are reserved by the author.  
+
+10. **Disclaimer of Warranty**: The software is provided "as is" without any warranty of any kind, express or implied.  
+
+11. **Limitation of Liability**: The author is not liable for any damages arising from the use or inability to use the software.  
+
+12. **Termination**: If you violate this license, your rights to use the library are immediately terminated. The author may, at their sole discretion, reinstate rights under specific conditions.  
+
+For permissions, licensing questions or other questions, please contact:  
+Email: BartakTomas@Batacek.eu  
+Website: https://batacek.eu/  
+Discord: https://discord.batacek.eu/
