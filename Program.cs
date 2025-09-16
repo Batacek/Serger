@@ -45,7 +45,7 @@ public abstract class Program
         if (config.Monitors.Count == 0)
         {
             config.Monitors.Add(new PingMonitor("8.8.8.8", 30000, 5000));
-            config.Monitors.Add(new HttpMonitor(60000, 10000, "https://www.google.com", [200], null));
+            config.Monitors.Add(new HttpMonitor(60000, 10000, "https://www.batacek.eu", [200], null));
             config.Monitors.Add(new SocketMonitor("8.8.8.8", 45000, 5000, 53));
             
             // Save the updated config
