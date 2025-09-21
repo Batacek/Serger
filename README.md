@@ -56,5 +56,6 @@ The GUI is using different license than the library.
 # Serger Team
 - Maintainer and main developer: [Tomáš Barták](mailto:BartakTomas@batacek.eu) (GitHub: [Batacek](https://github.com/Batacek))
 - Library Develeoper and translator: Natans Utevskis (GitHub: [nathutev](https://github.com/nathutev))
-- GUI developer and MacOS tester: [Martin Balcar](mailto:raixo@raixo.cz) (GitHub: [raixo](github.com/raixo))
+- GUI developer and MacOS tester: [Martin Balcar](mailto:raixo@raixo.cz) (GitHub: [raixo](https://github.com/raixo))
+
 
